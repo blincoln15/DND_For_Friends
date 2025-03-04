@@ -30,6 +30,11 @@
         section {
             padding: 20px;
         }
+        .character-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .character {
             margin: 10px auto;
             padding: 10px;
@@ -38,6 +43,48 @@
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+            .character.show {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .character h2 {
+                text-align: center;
+            }
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+            .stats div {
+                background: #eee;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+        /*.character-header {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);*/ /* Four equal columns */
+            /*background: #ddd;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .character-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .character-box {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+        }*/
+
         footer {
             background: #333;
             color: white;
@@ -65,18 +112,46 @@
             <option value="character2">Character 2</option>
             <option value="character3">Character 3</option>
         </select>
-        <div id="characterSheets">
-            <div id="character1" class="character" style="display: none;">
-                <h2>Character 1</h2>
-                <p>Details about Character 1.</p>
+        <div class="character-container">
+            <div id="character1" class="character">
+                <h2>Arin, the Brave</h2>
+                <p>A fearless warrior who defends the realm with unwavering determination.</p>
+                <div class="stats">
+                    <div>Name</div>
+                    <div>Race</div>
+                    <div>Class</div>
+                    <div>EXP</div>
+                    <div class="abilities">Add Stuff</div>
+                    <div class="acROW">Add Stuff</div>
+                </div>
             </div>
-            <div id="character2" class="character" style="display: none;">
-                <h2>Character 2</h2>
-                <p>Details about Character 2.</p>
+            <div id="character2" class="character">
+                <h2>Lyra, the Shadow</h2>
+                <p>A cunning rogue who moves unseen and strikes with deadly precision.</p>
+                <div class="stats">
+                    <div><strong>Class:</strong> Rogue</div>
+                    <div><strong>Race:</strong> Elf</div>
+                    <div><strong>Level:</strong> 4</div>
+                    <div><strong>HP:</strong> 32</div>
+                    <div><strong>Strength:</strong> 12</div>
+                    <div><strong>Dexterity:</strong> 20</div>
+                    <div><strong>Intelligence:</strong> 14</div>
+                    <div><strong>Abilities:</strong> Sneak Attack, Evasion</div>
+                </div>
             </div>
-            <div id="character3" class="character" style="display: none;">
-                <h2>Character 3</h2>
-                <p>Details about Character 3.</p>
+            <div id="character3" class="character">
+                <h2>Eldrin, the Mystic</h2>
+                <p>A wise wizard who wields ancient magic to shape the fate of the world.</p>
+                <div class="stats">
+                    <div><strong>Class:</strong> Wizard</div>
+                    <div><strong>Race:</strong> Half-Elf</div>
+                    <div><strong>Level:</strong> 6</div>
+                    <div><strong>HP:</strong> 28</div>
+                    <div><strong>Strength:</strong> 10</div>
+                    <div><strong>Dexterity:</strong> 14</div>
+                    <div><strong>Intelligence:</strong> 20</div>
+                    <div><strong>Abilities:</strong> Fireball, Arcane Shield</div>
+                </div>
             </div>
         </div>
     </section>
